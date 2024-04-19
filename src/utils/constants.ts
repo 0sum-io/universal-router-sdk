@@ -83,8 +83,8 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
   },
   // avalanche
   [43114]: {
-    router: '0x82635AF6146972cD6601161c4472ffe97237D292',
-    weth: '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
+    router: process.env.REACT_APP_UNIVERSAL_ROUTER_ADDRESS || '0x82635AF6146972cD6601161c4472ffe97237D292',
+    weth: process.env.REACT_APP_WRAPPED_NATIVE_CURRENCY_ADDRESS || '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
     creationBlock: 34491144,
   },
   // base goerli
