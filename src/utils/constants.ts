@@ -9,6 +9,11 @@ type ChainConfig = {
 const WETH_NOT_SUPPORTED_ON_CHAIN = '0x0000000000000000000000000000000000000000'
 
 const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
+  [Number(process.env.REACT_APP_CHAIN_ID)]: {
+    router: process.env.REACT_APP_UNIVERSAL_ROUTER_ADDRESS as string,
+    weth: process.env.REACT_APP_WRAPPED_NATIVE_CURRENCY_ADDRESS as string,
+    creationBlock: 1,
+  },
   // mainnet
   [1]: {
     router: '0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD',
